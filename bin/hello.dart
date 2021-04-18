@@ -8,6 +8,8 @@ String prompt(String prompText) {
 }
 
 void main() {
+  List<String> friends = ["stan", "you", "me", "dog", "for"];
+
   int calcSum(int con) {
     // function with arguement name con
     var sum = 0;
@@ -21,8 +23,6 @@ void main() {
   }
 
   void wileLoop() {
-    List<String> friends = ["stan", "you", "me", "dog", "for"];
-
     int i = 0;
     while (i < friends.length - 1) {
       print(friends[i]);
@@ -30,8 +30,23 @@ void main() {
       print(friends[i]);
     }
   }
+
   void sayHi(String username, int age) {
     print("hi ${username},you are ${age}");
-   }
+  }
 
+  void forLoop() {
+    for (int i = 0; i < friends.length; i++) {
+      print(friends[i].toUpperCase());
+    }
+  }
+
+  void forIn() {
+    for (String name in friends) {
+      print(friends.indexOf(name));
+      print(name.toUpperCase());
+    }
+  }
+
+  forIn();
 }
