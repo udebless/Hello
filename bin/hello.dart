@@ -48,5 +48,12 @@ void main() {
     }
   }
 
-  forIn();
+  void drawTrianle(int numTriangle) {
+    for (int i = 0; i < numTriangle - 1; i++) {
+      print(" /|");
+      print("/_|");
+    }
+  }
+
+  drawTrianle(6);
 }
