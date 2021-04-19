@@ -1,15 +1,26 @@
 import 'dart:io';
 import 'dart:math';
 
+List<String> friends = ["stan", "you", "me", "dog", "for"];
 String prompt(String prompText) {
+  //we are printing the prompt text onto the console
   print(prompText);
+  // we are getting input from the user and storing it in a string called input
   String input = stdin.readLineSync();
+  //return the function(input) and stops execution
   return input;
 }
 
-void main() {
-  List<String> friends = ["stan", "you", "me", "dog", "for"];
+class book {
+  book(String name) {
+    print("in constructor ${name}");
+  }
+  String title;
+  String author;
+  int numPages;
+}
 
+void main() {
   int calcSum(int con) {
     // function with arguement name con
     var sum = 0;
@@ -55,5 +66,13 @@ void main() {
     }
   }
 
-  drawTrianle(6);
+  book harryPotter = book("harry porter");
+  harryPotter.title = "merlin";
+  harryPotter.author = "blessed";
+  harryPotter.numPages = 456;
+
+  book hp = book("Lord of the ring");
+  hp.title = "merlin";
+  hp.author = "blessed";
+  hp.numPages = 456;
 }
